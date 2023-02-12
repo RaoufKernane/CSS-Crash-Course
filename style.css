@@ -1,17 +1,24 @@
-div{
-background-color: red;
-color: white;
-font-size: 24px;
+div:hover{
+    transition: background-color 300ms;
 }
-@media (max-width: 992px){
-    div{
-        font-size: 16px;
-    }
+div:hover{ 
+    background-color: rgba(0, 0, 0, 0.5)
 }
-    
+button{
+    animation: float 1000ms infinite alternate-reverse;
+    transition: all 300ms;
+}
+button:hover{
+    background-color: black;
+    color: white;
 
-@media (max-width:576){
-    div{
-        font-size: 16px;
+}
+
+@keyframes float{
+    0% {
+transform: translateY(0);
+    }
+    100%{
+transform: translateY(10px);
     }
 }
